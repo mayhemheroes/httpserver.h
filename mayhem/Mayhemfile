@@ -1,6 +1,6 @@
 
 # Namespaced project name that the target belongs to
-project: fuzz-parser
+project: httpserver.h
 
 duration: 60
 
