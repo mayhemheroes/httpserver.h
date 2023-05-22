@@ -3,7 +3,7 @@ project: httpserver.h
 
 duration: 60
 
-image: ghcr.io/gavincooke2000/fuzz-parser:master
+#image: ghcr.io/gavincooke2000/fuzz-parser:master
 
 # Target name (should be unique within the project)
 target: fuzz-parser
