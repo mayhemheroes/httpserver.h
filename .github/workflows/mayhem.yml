@@ -68,7 +68,7 @@ jobs:
         uses: ForAllSecure/mcode-action@v1
         with:
           mayhem-token: ${{ secrets.MAYHEM_TOKEN }}
-          args: --image image: ghcr.io/gavincooke2000/fuzz-parser:master --file ${{ matrix.mayhemfile }}
+          args: --image ghcr.io/gavincooke2000/fuzz-parser:master --file ${{ matrix.mayhemfile }}
           sarif-output: sarif
       
       - name: Upload SARIF file(s)
