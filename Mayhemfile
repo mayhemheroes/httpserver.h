@@ -1,5 +1,5 @@
 # Namespaced project name that the target belongs to
-project: httpserver.h
+#project: httpserver.h
 
 duration: 60
 
