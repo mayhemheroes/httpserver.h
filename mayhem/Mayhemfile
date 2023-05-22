@@ -1,6 +1,6 @@
 
 # Namespaced project name that the target belongs to
-project: fuzz-parser
+project: httpserver.h
 
 duration: 60
 
@@ -8,7 +8,7 @@ duration: 60
 target: fuzz-parser
 
 # Base image to run the binary in.
-image: ghcr.io/gavincooke2000/fuzz-parser:latest
+image: ghcr.io/gavincooke2000/httpserver.h:latest
 
 # Turn on Mayhem's advanced triage capabilities.
 #advanced_triage: true
