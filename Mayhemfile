@@ -1,7 +1,7 @@
 # Namespaced project name that the target belongs to
 project: httpserver.h
 
-duration: 60
+#duration: 60
 
 #image: ghcr.io/gavincooke2000/fuzz-parser:master
 
