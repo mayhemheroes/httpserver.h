@@ -68,7 +68,7 @@ jobs:
         uses: ForAllSecure/mcode-action@v1
         with:
           mayhem-token: ${{ secrets.MAYHEM_TOKEN }}
-          args:
+          args: --file ${{ matrix.mayhemfile }}
           sarif-output: sarif
       
       - name: Upload SARIF file(s)
