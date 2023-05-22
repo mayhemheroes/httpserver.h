@@ -44,7 +44,7 @@ jobs:
         with:
           context: .
           push: true
-          file: mayhem/Dockerfile
+          file: Dockerfile
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
 
@@ -59,7 +59,7 @@ jobs:
       fail-fast: false
       matrix:
         mayhemfile:
-          - mayhem/Mayhemfile
+          - Mayhemfile
 
     steps:
       - uses: actions/checkout@v3
@@ -68,7 +68,7 @@ jobs:
         uses: ForAllSecure/mcode-action@v1
         with:
           mayhem-token: ${{ secrets.MAYHEM_TOKEN }}
-          args: --image ghcr.io/gavincooke2000/fuzz-parser:master --file ${{ matrix.mayhemfile }}
+          args: --file ${{ matrix.mayhemfile }}
           sarif-output: sarif
       
       - name: Upload SARIF file(s)
