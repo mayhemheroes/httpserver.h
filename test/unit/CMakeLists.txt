@@ -1,18 +1,26 @@
 add_executable(
-  unit-test-runner
-  munit.c test_parser.c test_read_socket.c test_write_socket.c main.c
+  fuzz-parser
+  fuzz_parser.c
 )
+
 
 include(CheckFunctionExists)
 check_function_exists(epoll_wait EPOLL)
 check_function_exists(kqueue KQUEUE)
 
 if(KQUEUE)
-  target_compile_definitions(unit-test-runner PRIVATE "KQUEUE")
+  target_compile_definitions(fuzz-parser PRIVATE "KQUEUE")
 endif()
 
 if(EPOLL)
-  target_compile_definitions(unit-test-runner PRIVATE "EPOLL")
+  target_compile_definitions(fuzz-parser PRIVATE "EPOLL")
 endif()
 
-target_link_libraries(unit-test-runner PUBLIC httpsrv)
+target_link_libraries(fuzz-parser PUBLIC httpsrv)
+
+## Uncomment these lines after converting fuzzme.c into a libFuzzer target
+if (NOT CMAKE_CXX_COMPILER_ID STREQUAL "Clang")
+    message(FATAL_ERROR "Clang is required for libFuzzer!")
+endif()
+target_compile_options(fuzz-parser PUBLIC -fsanitize=fuzzer)
+target_link_options(fuzz-parser PUBLIC -fsanitize=fuzzer)

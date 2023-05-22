@@ -1,0 +1,2 @@
+/usr/bin/ar qc libhttpsrv.a  CMakeFiles/httpsrv.dir/api.o CMakeFiles/httpsrv.dir/connection.o CMakeFiles/httpsrv.dir/io_events.o CMakeFiles/httpsrv.dir/parser.o CMakeFiles/httpsrv.dir/read_socket.o CMakeFiles/httpsrv.dir/request_util.o CMakeFiles/httpsrv.dir/respond.o CMakeFiles/httpsrv.dir/server.o CMakeFiles/httpsrv.dir/write_socket.o
+/usr/bin/ranlib libhttpsrv.a
