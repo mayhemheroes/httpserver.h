@@ -1,0 +1,4 @@
+/home/gecooke/hackathon-httpserver/httpserver.h/src/CMakeFiles/rebuild_cache.dir
+/home/gecooke/hackathon-httpserver/httpserver.h/src/CMakeFiles/edit_cache.dir
+/home/gecooke/hackathon-httpserver/httpserver.h/src/CMakeFiles/httpserver.h.dir
+/home/gecooke/hackathon-httpserver/httpserver.h/src/CMakeFiles/httpsrv.dir
